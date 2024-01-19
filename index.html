@@ -32,6 +32,16 @@
 		alert(res + " 먹고시퓨다...");
 	}
 
+	function show03(){
+		var food = document.getElementsByName("food")[0];
+		// selectedIndex : 선택한 option의 index 반환
+		var idx = food.selectedIndex;
+		// options : select 태그가 가진 option 태그들
+		var foodName = food.options[idx].value;
+		foodName.textContent
+		alert(foodName + " 먹어야지먹어야지먹어야지먹어야지먹어야지먹어야지!");
+	}
+
 </script>
 </head>
 <body>
@@ -55,6 +65,8 @@
 			<option value="육회">육회</option>
 		</select>
 		<input type="button" value="선택" onclick="show02();">
+		<h1> 가나다라</h1>
+
 	</form>
 </body>
 </html>
