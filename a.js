@@ -4,5 +4,5 @@ function show01(){
 	var idx = food.selectedIndex;
 	// options : select 태그가 가진 option 태그들
 	var foodName = food.options[idx].value;
-	alert(foodName + " 먹어야지!");
+	alert(foodName + " 먹어야지먹어야지먹어야지먹어야지먹어야지먹어야지!");
 }
