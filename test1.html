@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step09_example5.html</title>
+</head>
+<body>
+    <label for="1">지출결의</label>
+    <select name = "language" onchange = 's1(this)'>
+        <option value="0">선택</option>
+        <option value="1">플러스</option>
+        <option value="2">마이너스</option>
+    </select>
+
+    <h1> </h1>
+
+    <label for="2">사용지역</label>
+    <select name = "language" onchange = 's2(this)'>
+        <option value="0">선택</option>
+        <option value="1">국내</option>
+        <option value="2">국외</option>
+    </select>
+    <h1> </h1>  
+
+    <label for="3">사용방법</label>
+    <select name = "language" onchange = 's3(this)'>
+        <option value="0">선택</option>
+        <option value="1">카드</option>
+        <option value="2">세금계산서</option>
+        <option value="3">계좌입금</option>
+    </select>
+    <h1> </h1>
+
+    <label for="4">사용부서</label>
+    <select name = "language" onchange = 's4(this)'>
+        <option value="0">선택</option>
+        <option value="1">안전기준국제화센터</option>
+        <option value="2">부품연구처</option>
+        <option value="3">미래차연구처</option>
+        <option value="4">자동차인증처</option>
+        <option value="5">자율주행연구처</option>
+        <option value="6">중대사고조사처</option>
+    </select>
+    <h1> </h1>
+
+    <label for="5">사용비목</label>
+    <select name = "language" onchange = 's5(this)'>
+        <option value="0">선택</option>
+        <option value="1">여비</option>
+        <option value="2">회의비</option>
+        <option value="3">연구재료비</option>
+        <option value="4">교통통신비</option>
+        <option value="5">소모품비</option>
+        <option value="6">유인물비</option>
+    </select>
+    <h1> </h1>
+    
+    
+    <span>상세내용</span>
+    <input type="text" id="input"><br>
+    <h1> </h1>
+    <button onclick="output()">출력하기</button>
+    
+    <h1> </h1>
+    
+    <p> 관리번호 : </p>
+
+    <span id = 'data'></span><span id = 'result1'></span><span id = 'result2'></span><span id = 'result3'></span><span id = 'result4'></span><span id = 'result5'></span><span>/</span><span id="output"></span>
+    
+    
+
+
+
+    
+    
+    
+
+    
+
+    <h1>  </h1>
+    <h2 id = "result1"  style="display: inline;"></h2>
+    <h3 id = "result2"  style="display: inline;"></h3>
+
+
+
+    <script>
+        
+        
+
+
+        var today = new Date();
+        var year = today.getFullYear();
+        var month = today.getMonth()+1;
+        var day = today.getDate();
+
+        var format = year.toString().slice(-2)+(("00"+month.toString()).slice(-2))+(("00"+day.toString()).slice(-2));
+        document.getElementById("data").innerText = format;
+        
+        
+
+        function s1(e) {
+        // 선택된 데이터 가져오기
+        const value = e.value;
+        
+        // 데이터 출력
+        document.getElementById('result1').innerText = value;
+        }
+        function s2(e) {
+        // 선택된 데이터 가져오기
+        const value = e.value;
+        
+        // 데이터 출력
+        document.getElementById('result2').innerText = value;
+        }
+        function s3(e) {
+        // 선택된 데이터 가져오기
+        const value = e.value;
+        
+        // 데이터 출력
+        document.getElementById('result3').innerText = value;
+        }
+        function s4(e) {
+        // 선택된 데이터 가져오기
+        const value = e.value;
+        
+        // 데이터 출력
+        document.getElementById('result4').innerText = value;
+        }
+        function s5(e) {
+        // 선택된 데이터 가져오기
+        const value = e.value;
+        
+        // 데이터 출력
+        document.getElementById('result5').innerText = value;
+        }
+
+        var temp;
+
+
+        function output(){
+        
+
+
+        var input = document.getElementById("input").value;
+        temp = input;
+            
+        document.getElementById("output").innerText = temp;
+        }
+        
+
+    </script>
+    
+</body>
+</html>
