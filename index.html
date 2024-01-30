@@ -7,6 +7,9 @@
     <title>Step09_example5.html</title>
 </head>
 <body>
+
+    <h1> 안전기준국제조화 출연금 지출결의 관리번호 </h1>
+
     <label for="1">지출결의</label>
     <select name = "language" onchange = 's1(this)'>
         <option value="0">선택</option>
@@ -57,7 +60,6 @@
     </select>
     <h1> </h1>
     
-    
     <span>상세내용</span>
     <input type="text" id="input"><br>
     <h1> </h1>
@@ -65,17 +67,15 @@
     
     <h1> </h1>
     
-    <p> 관리번호 : </p>
+    <p> "아래 관리번호(11자리)/상세내용 을 복사하여 지출결의 적요에 입력해주세요" </p>
 
     <span id = 'data'></span><span id = 'result1'></span><span id = 'result2'></span><span id = 'result3'></span><span id = 'result4'></span><span id = 'result5'></span><span>/</span><span id="output"></span>
     
     
-
+    
     <h1>  </h1>
     <h2 id = "result1"  style="display: inline;"></h2>
     <h3 id = "result2"  style="display: inline;"></h3>
-
-
 
     <script>
         
@@ -87,8 +87,6 @@
         var format = year.toString().slice(-2)+(("00"+month.toString()).slice(-2))+(("00"+day.toString()).slice(-2));
         document.getElementById("data").innerText = format;
         
-        
-
         function s1(e) {
         // 선택된 데이터 가져오기
         const value = e.value;
@@ -127,15 +125,22 @@
 
         var temp;
 
-
         function output(){
-        
 
-
-        var input = document.getElementById("input").value;
-        temp = input;
-            
+        var temp = document.getElementById("input").value;
+          
         document.getElementById("output").innerText = temp;
+
+        var temp1 = document.getElementById("result1").innerHTML;
+        var temp2 = document.getElementById("result2").innerHTML;
+        var temp3 = document.getElementById("result3").innerHTML;
+        var temp4 = document.getElementById("result4").innerHTML;
+        var temp5 = document.getElementById("result5").innerHTML;
+        
+        if(temp1 == 0 || temp2 == 0 || temp3 == 0 || temp4 == 0 || temp5 == 0){
+        alert("항목 선택을 완료하세요.")
+        }
+
         }
         
 
